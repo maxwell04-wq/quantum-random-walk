@@ -74,3 +74,4 @@ print_table_from_dict(search_counts, n, n_d)
 # Print the marked element
 max_key = max(search_counts, key=search_counts.get)
 print("Marked element:", int(max_key[0:3], 2))
+
