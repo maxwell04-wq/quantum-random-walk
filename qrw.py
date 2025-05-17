@@ -63,6 +63,7 @@ qc.draw('mpl', filename=f"qrw_circuit_{steps}.png")
 sim_ideal = AerSimulator()
 tqc = transpile(qc, sim_ideal)
 result_ideal = sim_ideal.run(tqc).result()
-plot_histogram(result_ideal.get_counts(), filename=f"qrw_sim_results_{steps}.png")
+plot_histogram(result_ideal.get_counts(), filename=f"./images/qrw_sim_results_{steps}.png")
 
 print_table_from_dict(result_ideal.get_counts(), n, n_d)
+
