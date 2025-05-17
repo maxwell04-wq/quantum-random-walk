@@ -68,10 +68,9 @@ tqc_search = transpile(qc_search, sim_ideal)
 result_ideal = sim_ideal.run(tqc_search).result()
 search_counts =  result_ideal.get_counts()
 # Display the results
-plot_histogram(search_counts, filename=f"qrw_search_{steps}")
+plot_histogram(search_counts, filename=f"./images/qrw_search_{steps}")
 # Print the simulation data
 print_table_from_dict(search_counts, n, n_d)
 # Print the marked element
 max_key = max(search_counts, key=search_counts.get)
 print("Marked element:", int(max_key[0:3], 2))
-
